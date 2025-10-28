@@ -1,6 +1,6 @@
 // Beard Boyz game
 
-const NAMES = ["Abed", "Jeff", "Jing", "Renz", "Ramil", "Hanz", "Ritchie", "Jojo"];
+const NAMES = ["Abed", "Jeff", "Jing", "Renz", "Ramil", "Hanz", "Ritchie", "Claro"];
 const DATA = [
   { name: "Abed", src: "assets/images/img1.png" },
   { name: "Jeff", src: "assets/images/img2.png" },
@@ -9,7 +9,7 @@ const DATA = [
   { name: "Ramil", src: "assets/images/img5.png" },
   { name: "Hanz", src: "assets/images/img6.png" },
   { name: "Ritchie", src: "assets/images/img7.png" },
-  { name: "Jojo", src: "assets/images/img8.png" },
+  { name: "Claro", src: "assets/images/img8.png" },
 ];
 
 const ROUND_TIME = 5.0; // seconds
@@ -138,11 +138,11 @@ function endGame() {
   finalScore.textContent = score.toString();
   finalScore.classList.toggle("score-low", score <= 4);
   if (score <= 4) {
-    resultMessage.textContent = "Ang baba ng score, magpa-papaitan ka!";
+    resultMessage.textContent = "Ang baba ng score, magpa-papaitan ka na!";
   } else if (score <= 7) {
-    resultMessage.textContent = "Nice!";
+    resultMessage.textContent = "Puwede!";
   } else {
-    resultMessage.textContent = "Ayos! Magpapa-Paitan si boss Ramil!";
+    resultMessage.textContent = "Ayos! Nanalo ka ng papaitan! Sagot ni Ramil!";
   }
   clearFX();
   showScreen(result);
