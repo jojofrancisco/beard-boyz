@@ -1,11 +1,14 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Beard Boyz</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/images/img1.png">
 </head>
+
 <body>
   <main id="app">
     <!-- Splash Screen -->
@@ -13,14 +16,17 @@
       <div class="logo">🧔🏻‍♂️</div>
       <h1 class="title">Beard Boyz</h1>
       <button id="playBtn" class="btn primary">Play</button>
-      <p class="hint">Guess whose mustache &amp; beard you see!</p>
     </section>
 
     <!-- Game Screen -->
     <section id="game" class="screen hidden">
+      <div class="game-header">
+        <div class="logo small">🧔🏻‍♂️</div>
+        <h2 class="subtitle">Beard Boyz</h2>
+      </div>
       <div class="hud">
         <div class="hud-left">
-          <div class="round">Photo <span id="roundNum">1</span>/8</div>
+          <div class="round">Boyz <span id="roundNum">1</span>/8</div>
         </div>
         <div class="hud-center">
           <div class="timer">
@@ -34,7 +40,6 @@
 
       <div class="stage">
         <img id="photo" alt="Whose beard?" />
-        <canvas id="fxCanvas"></canvas>
         <div id="bigX" class="big-x hidden">✕</div>
       </div>
 
@@ -43,10 +48,9 @@
 
     <!-- Result Screen -->
     <section id="result" class="screen hidden">
-      <h2 class="title">Nice one!</h2>
+      <h2 class="title" id="resultMessage">Nice one!</h2>
       <p class="final">Your score: <strong id="finalScore">0</strong> / 8</p>
       <button id="playAgain" class="btn primary">Play Again</button>
-      <p class="hint small">Tip: Replace images & names in <code>script.js</code> to use your own.</p>
     </section>
   </main>
 
@@ -55,4 +59,5 @@
 
   <script type="module" src="script.js"></script>
 </body>
+
 </html>
